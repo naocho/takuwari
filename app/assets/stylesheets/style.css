@@ -1085,3 +1085,10 @@ footer p {
   padding-top: 3vh;
 }
 
+.language-wrapper {
+  display:flex;
+  justify-content: center;
+  border: 1px solid;  
+  width: 20vh;
+  margin: 1px 800px;
+}

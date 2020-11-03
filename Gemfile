@@ -76,3 +76,10 @@ end
 
 gem "aws-sdk-s3", require: false
 
+gem 'webpacker', '~> 4.0'
+
+gem 'bootstrap', '~> 4.1.1'
+
+gem 'jquery-rails'
+
+gem 'jquery-turbolinks'
