@@ -1,7 +1,10 @@
 $(function() {
-  $('.language-wrapper').slick({
-      dots: true,
-      autoplay: true,
-      autoplaySpeed: 1000,
-  });
+  $('.font-log').slick({
+    autoplay: true,
+    autoplaySpeed: 2500,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    cssEase: 'linear'
+});
 });
