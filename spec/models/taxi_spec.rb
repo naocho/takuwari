@@ -66,11 +66,6 @@ describe Taxi, type: :model do
         expect(@taxi.errors.full_messages).to include("Title can't be blank")
       end
 
-      it "英字は登録出来ない" do
-        @taxi.title = "aaaaaa"
-        @taxi.valid?
-        expect(@taxi.errors.full_messages).to include("Title 英字や。などは表現出来ません。")
-      end
 
       it "詳細がない時" do
         @taxi.text = nil

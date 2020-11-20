@@ -6,9 +6,9 @@ class Taxi < ApplicationRecord
   with_options presence: true do
     validates :image    
     validates :departure,               format: { with: /(https?|ftp)(:\/\/[-_.!~*\'()a-zA-Z0-9;\/?:\@&=+\$,%#]+)/, message: 'ちゃんとURLを入力してください。'}
-    validates :arrival,                 format: { with: /\A[ぁ-んァ-ン一-龥]+\z/, message: '英字や。などは表現出来ません。'}
-    validates :title,                   format: { with: /\A[ぁ-んァ-ン一-龥]+\z/, message: '英字や。などは表現出来ません。'}
-    validates :text,                    format: { with: /[ぁ-んァ-ン一-龥]{0,100}/} 
+    validates :arrival,                 format: { with: /\A[ぁ-んァ-ン一-龥]/, message: '英字や。などは表現出来ません。'}
+    validates :title                   
+    validates :text                    
   end
 
   def self.search(search)
