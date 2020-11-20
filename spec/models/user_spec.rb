@@ -56,8 +56,8 @@ describe User, type: :model do
       end
 
       it "passwordが8文字以下であれば登録できない" do
-        @user.password = "abemaru831"
-        @user.password_confirmation = "abemaru831"
+        @user.password = "ab831"
+        @user.password_confirmation = "ab831"
         @user.valid?
         expect(@user.errors.full_messages).to include("Password is too short (minimum is 6 characters)")
       end

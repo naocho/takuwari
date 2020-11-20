@@ -1,16 +1,38 @@
+ <div class="menu">
+  </div>
+
 <%= form_with(url: search_taxis_path, local: true, method: :get, class: "search-form") do |form| %>
-  <%= form.text_field :departure, placeholder: "出発地を検索する", class: "search-input" %>
+  <%= form.text_field :title, placeholder: "タイトルで検索", class: "search-input" %>
   <%= form.submit "検索", class: "search-btn" %>
 <% end %>
 
-<div class="language-wrapper">
-<% @taxis.each do |images| %> 
-<span><%= image_tag images.image,class:"rube"%></span> 
-<% end %>
- </div>
-<div class="rebu" >
-<h1 class="grid-6" >最新の画像一覧</h1>
-</div>
+      <div class="font-log">
+        <div>
+          <a> ・御観覧有り難うございます。</a>
+        </div>
+        <div>
+          <a>・一緒に頑張りましょう。</a>
+        </div>
+        <div>
+          <a>・ポートフォリオ待ってます。</a>
+        </div>
+      </div>
+  
+      <div class="coment-size">
+      <div>
+      <h3 class="coment-center">御観覧有り難うございます。製作者のプロフォールも御座います。<h3>
+        <div class="main-prof-btn">
+      <h1 class="prof-toko-btn"><%= link_to "プロフィール", profiles_path %></h1>
+  </div>
+            <div>
+      <p>--------------------------------------------------------------------------</p>
+            <div>
+      <h3 class="coment-center">最新のポートフォリオ一覧<h3>
+      </div>
+      </div>
+      </div>
+    </div>
+</body>
 
 <div class="contents row">
   <% @taxis.each do |taxi| %>
